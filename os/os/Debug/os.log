@@ -1,0 +1,7 @@
+﻿  os.cpp
+C:\Users\le\source\repos\os\os\os.cpp(22,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\le\source\repos\os\os\os.cpp(32,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\le\source\repos\os\os\os.cpp(68,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\le\source\repos\os\os\os.cpp(91,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\le\source\repos\os\os\os.cpp(148,16): warning C4018: '<': signed/unsigned mismatch
+  os.vcxproj -> C:\Users\le\source\repos\os\Debug\os.exe
