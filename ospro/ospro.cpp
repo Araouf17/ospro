@@ -17,13 +17,11 @@ using namespace std;
 
 			if (memory.size() < frames)
 			{
-				cout << "Frame " << i << " ";
 
 				if (setof_ref.find(page_ref[i]) == setof_ref.end())
 				{
 					setof_ref.insert(page_ref[i]);
 					memory.push(page_ref[i]);
-					cout << page_ref[i] <<endl;
 					pagefaults++;
 				}
 			}
@@ -43,13 +41,23 @@ using namespace std;
 				}
 			}
 		}
+		cout <<endl << "last frames are " << endl;
+		while (!memory.empty()) {
+			cout << memory.front()<<endl;
+			memory.pop();
+		}
+
+		cout << endl;
+
 		return pagefaults;
 		}
 
  int LRUAlg(int page_ref[], int num, int frames)
  {
      unordered_set<int> ref;
+	 // for lru refrences 
 	 unordered_map<int, int> lru_indexes;
+
 	 int pagefaults = 0;
 
 	 for (int i = 0; i < num; i++)
@@ -86,6 +94,15 @@ using namespace std;
 			 lru_indexes[page_ref[i]] = i;
 		 }
 	 }
+
+	 cout << endl << "last frames are " << endl;
+
+	// unordered_set<int> ::iterator itr;
+
+	 for (auto itr = ref.begin(); itr != ref.end(); itr++) {
+		 cout << (*itr) << endl;
+	 }
+
 	 return pagefaults;
  }
 
@@ -145,6 +162,13 @@ using namespace std;
 			 Fr[j] = page_ref[i];
 		 }
 	 }
+
+	 cout << endl << "last frames are " << endl;
+
+	 for (int i = 0; i < Fr.size(); i++) {
+		 cout << Fr.at(i) << endl;
+	 }
+
 	 return num - hit ;
  }
 
